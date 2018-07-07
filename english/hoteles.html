@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>TripFinder</title>
+	<link rel="stylesheet" type="text/css" href="css/hoteles.css">
+	<link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+	<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">-->
+	<script type = "text/javascript" src = "https://code.jquery.com/jquery-3.3.1.min.js"></script>           
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script> 
+	<script src="js/irarriba.js"></script>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/nouislider.min.css">
+	<script type="text/javascript" href="js/nouislider.min.js"></script>
+</head>
+<body>
+
+<div class="navbar-fixed">
+	<nav>
+	    <div class="nav-wrapper">
+	      <a href="index.html" class="brand-logo">TripFinder</a>
+	      <ul id="nav-mobile" class="right hide-on-med-and-down margencabeceras">
+	        <li><a href="index.html">Home</a></li>
+	        <li><a href="vuelos.php">Flights</a></li>
+	        <li class="active"><a href="hoteles.html">Hotels</a></li>
+	        <li><a href="vuho.html">Flight+Hotel</a></li>
+	        <li><a href="contacto.html">Contact</a></li>
+	      </ul>
+	    </div>
+	</nav>
+</div>
+
+<nav>
+    <div class="nav-wrapper margenbread">
+      <div class="col s12">
+        <a href="#!" class="breadcrumb margenbreadtext">Hotels</a>
+      </div>
+    </div>
+</nav>
+
+<div class="container">
+	<form action="" class="margenform">
+				<div class="row">
+			        <div class="input-field col s3">
+			          <input type="text" id="ciudad" class="autocomplete">
+			          <label for="ciudad">City</label>
+			        </div>
+			        <div class="input-field col s3">
+			          <input type="date" id="entrada" class="datepicker">
+			          <label for="entrada">Check-in</label>
+			        </div>
+			        <div class="input-field col s3">
+			          <input type="date" id="salida" class="datepicker">
+			          <label for="salida">Check-out</label>
+			        </div>
+			        <div class="input-field col s3">
+			          <input type="text" id="huespedes" class="autocomplete">
+			          <label for="huespedes">Number of people</label>
+			        </div>
+				</div>
+				<div class="row">
+					<div class="input-field col s4">
+					    <select id="habitaciones">
+					      <option value="1">1 room</option>
+					      <option value="2">2 rooms</option>
+					      <option value="3">3 rooms</option>
+					      <option value="4">4 rooms</option>
+					      <option value="5">5 rooms</option>
+					      <option value="6">6 rooms</option>
+					      <option value="7">7 rooms</option>
+					      <option value="8">8 rooms</option>
+					      <option value="9">9 rooms</option>
+					      <option value="10">10 rooms</option>
+					    </select>
+					    <label for="habitaciones">Number of rooms</label>
+					</div>
+					<div class="col s4">
+						<p class="range-field">
+							<label for="get put">Price per night</label>
+							<!--<input type="text" id="get" onchange="fetch()">-->
+							<input type="range" id="put" name="" min="0" max="1000" step="50" >
+						</p>
+					</div>	
+				</div>
+
+
+		<div class="row">
+			<button class="btn waves-effect waves-light col s2" type="submit" name="action">Search
+		    <i class="material-icons right">search</i>
+			</button>
+		    <button class="btn waves-effect waves-light col s3 offset-s1" type="reset" name="action">Reset
+		    <i class="material-icons right">refresh</i>
+		  	</button>
+		</div>
+	</form>
+</div>
+<br><br>
+
+
+<footer class="page-footer foo">
+
+
+	<div class="volverarriba">
+		<a href="#" id="volverarriba" title="Volver hacia arriba"></a>
+	</div>
+
+
+	<div class="container">
+		<div class="row col s10">
+				<h1 class="contactanos">Contact us</h1>
+			
+		</div>
+			
+		<div class="row">
+				<p class="col s12">If you have any doubt regarding your purchase, booking or about the web, you can contact us via:</p>
+		</div>
+			
+		<div class="row">
+			<ul><img class="col s1 info" src="./multimedia/contacto.png" alt="contacto"> <p class="col s6">Phone: +34 922 1658 7235</p> </ul>
+			</div>
+			
+		<div class="row">
+			<ul> <img class="col s1 info" src="./multimedia/chat.png" alt="contacto"> <p class="col s6">Chat</p></ul>
+		</div>
+		
+		<div class="row">
+			<ul><img class="col s1 info" src="./multimedia/facebook.png" alt="contacto"> <p class="col s6">Facebook: <a class="color" href=" www.facebook.com/VuelosTop.ES">  facebook.com/VuelosTop.ES </a></p> </ul>
+		</div>
+
+		<div>
+			<a href="../hoteles.html">
+			<img src="multimedia/español.jpg" title="Spanish" class="bandera"></a>
+			<a href="hoteles.html">
+			<img src="multimedia/ingles.png" title="English" class="bandera"></a>
+		</div>
+	</div>
+
+
+    <!-- POLITICAS -->
+    <div class="footer-copyright">
+    	<div class="container right-align">
+		 Privacy policy &nbsp; © 2018 TripFinder Inc
+		</div>
+	</div>
+</footer>
+
+
+
+<script>
+$(function(){
+	$('.datepicker').pickadate({
+		monthsFull: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+		monthsShort: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+		weekdaysFull: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+		weekdaysShort: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+		selectMonths: true,
+		selectYears: 100, // Puedes cambiarlo para mostrar más o menos años
+		today: 'Today',
+		clear: 'Reset',
+		close: 'Ok',
+		labelMonthNext: 'Siguiente mes',
+		labelMonthPrev: 'Mes anterior',
+		labelMonthSelect: 'Selecciona un mes',
+		labelYearSelect: 'Selecciona un año',
+		
+	});
+});
+</script>
+<script>
+$(function(){
+var slider = document.getElementById('');
+noUiSlider.create(slider, {
+ start: [20, 80],
+ connect: true,
+ step: 1,
+ range: {
+   'min': 0,
+   'max': 100
+ },
+ format: wNumb({
+   decimals: 0
+ })
+});
+});
+</script>
+ <script>
+function fetch(){
+	var get = document.getElementById("get").value;
+	document.getElementById("put").value = get;
+}
+ </script>
+
+ <script type="text/javascript">
+	$(document).ready(function(){
+		$('select').material_select();
+	});
+</script>
+</body>
+</html>
