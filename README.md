@@ -1,3 +1,0 @@
-# PRACTICA GIT
-
-aaa
